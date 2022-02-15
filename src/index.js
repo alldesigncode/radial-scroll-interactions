@@ -27,17 +27,13 @@ window.addEventListener("load", () => {
   verticalScrollbar.setPosition(0, 0);
   verticalScrollbar.track.yAxis.element.remove();
   verticalScrollbar.track.xAxis.element.remove();
-  verticalScrollbar.updatePluginOptions("modal", { open: true }); // disable scroll initially
+  verticalScrollbar.updatePluginOptions("modal", { open: true });
   verticalScrollbar.addListener(({ offset }) => {
     const { clientHeight, scrollHeight } = verticalScrollbar.containerEl;
-
-    // Calculate scroll progress that will increase up to 360.
     const progress = Number.parseInt(
       ((offset.y / (scrollHeight - clientHeight)) * 360).toFixed(0),
       10
     );
-
-    // Calculate rotate percentage between the range of two values: 225 - 333.
     const rotatePercentage = ((progress * (333 - 225)) / 360 + 225).toFixed(0);
 
     gsap.to(scrollBar, {
