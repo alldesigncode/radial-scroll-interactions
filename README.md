@@ -1,4 +1,8 @@
-# Radial Scrollbar Interactions
+# Description
+
+This is a minimal and interactive page with radial scrollbar. It has dynamic navigation that activates and moves based on user scroll and it uses Intersection Observer API, along with GSAP and smooth scrollbar library.
+
+# App
 
 Project is generated using parcel.
 
