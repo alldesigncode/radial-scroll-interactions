@@ -21,7 +21,7 @@ window.addEventListener("load", () => {
 
   Scrollbar.use(ModalPlugin);
   const verticalScrollbar = Scrollbar.init(content, {
-    dumping: 0.1,
+    damping: 0.05,
     delegateTo: document,
   });
   verticalScrollbar.setPosition(0, 0);

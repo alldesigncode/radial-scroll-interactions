@@ -55,7 +55,7 @@ body {
 nav {
   position: absolute;
   top: 50%;
-  left: 190px;
+  left: 11.875rem;
   transform: translate(-50%, -50%);
   z-index: 1000;
 
@@ -104,10 +104,10 @@ nav {
   .scrollbar {
     position: absolute;
     content: "";
-    top: 250px;
-    left: 150px;
-    inline-size: 150px;
-    block-size: 700px;
+    top: 15.625rem;
+    left: 9.375rem;
+    inline-size: 9.375rem;
+    block-size: 43.75rem;
     background: var(--c-dark);
     transform-origin: center top;
     transform: rotate(225deg);
@@ -121,7 +121,7 @@ nav {
 
   .circle-1 {
     position: absolute;
-    inset: 240px;
+    inset: 15rem;
     border-radius: 50%;
     z-index: 2001;
     background: linear-gradient(to right, var(--c-dark-2), var(--c-dark-1));
@@ -129,7 +129,7 @@ nav {
 
   .circle-2 {
     position: absolute;
-    inset: 190px;
+    inset: 11.875rem;
     border-radius: 50%;
     z-index: 2000;
     background: linear-gradient(to right, var(--c-dark-3), var(--c-dark-4));
@@ -137,7 +137,7 @@ nav {
 
   .circle-2-overlay {
     position: absolute;
-    inset: 205px;
+    inset: 12.813rem;
     border-radius: 50%;
     z-index: 2000;
     background: var(--c-white);
@@ -164,7 +164,7 @@ nav {
   display: grid !important;
   grid-template-columns: repeat(
     auto-fit,
-    minmax(300px, var(--min-content-size))
+    minmax(18.75rem, var(--min-content-size))
   );
 
   &.even {
@@ -172,7 +172,7 @@ nav {
       @extend %borderLeftHeading;
       transform: translateY(var(--item-size-negative));
 
-      @media only screen and (max-width: 1623px) {
+      @media only screen and (max-width: 104.8125em) {
         transform: none;
         .heading { border-right: 1px solid var(--c-light-2); }
       }
@@ -181,7 +181,7 @@ nav {
     .item:nth-last-of-type(odd) {
       @extend %borderRightHeading;
 
-      @media only screen and (max-width: 1623px) {
+      @media only screen and (max-width: 104.8125em) {
         transform: none;
         .heading { border-left: 1px solid var(--c-light-2); }
       }
@@ -193,7 +193,7 @@ nav {
       @extend %borderLeftHeading;
       transform: translateY(var(--item-size-negative));
 
-      @media only screen and (max-width: 1623px) {  transform: none; }
+      @media only screen and (max-width: 104.8125em) {  transform: none; }
     }
 
     .item:nth-last-of-type(even) {  @extend %borderRightHeading; }
@@ -225,13 +225,13 @@ nav {
 
 
     align-self: flex-end;
-    width: 210px;
+    inline-size: 13.125rem;
     position: relative;
     margin-inline-end: var(--space-xxl);
 
     .line {
-      height: 4px;
-      width: 38px;
+      block-size: 4px;
+      inline-size: 38px;
       background: var(--c-dark);
       position: absolute;
       left: -18px;
@@ -241,7 +241,7 @@ nav {
     p {
       line-height: 1.6;
       font-size: 13px;
-      width: 75%;
+      inline-size: 75%;
       position: absolute;
       color: var(--c-dark);
       right: 0;
@@ -274,7 +274,7 @@ nav {
       background: transparent;
     }
 
-    @media only screen and (max-width: 1623px) {  display: none; }
+    @media only screen and (max-width: 104.8125em) {  display: none; }
   }
 
   &:nth-child(2) {
@@ -311,8 +311,8 @@ nav {
     block-size: 300px;
 
     img {
-      width: 100%;
-      height: 100%;
+      inline-size: 100%;
+      block-size: 100%;
       display: block;
       object-fit: cover;
     }
